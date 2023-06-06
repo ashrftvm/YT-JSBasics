@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storage</title>
+</head>
+<body>
+    <h1>I need more storage!</h1>
+    <script>
+        // 4KB storage
+        document.cookie = "username=John Doe; expires=Sun, 31 Dec 2023 09:57:47 GMT; path=/"
+        console.log(document.cookie)
+
+        document.cookie = "username=;expires=Sun, 21 May 2023 09:57:47 GMT; path=/"
+
+        // 10MB storage
+        localStorage.setItem("username", "John")
+        console.log(localStorage.getItem("username"))
+        // localStorage.removeItem("username")
+
+        // 5MB storage
+        // sessionStorage.setItem("secretValue", "asdsadsadsad123")
+        // console.log(sessionStorage.getItem("secretValue"))
+        // sessionStorage.removeItem("secretValue")
+    </script>
+</body>
+</html>

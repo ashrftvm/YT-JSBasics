@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions, Scope, Closures</title>
+</head>
+<body>
+    <h1>Hello from scope</h1>
+    <script>
+        // let x = 10; //global scope
+
+        // function greet(){
+        //     let y = 20; //local scope
+        //     console.log("hello there", x, y)
+        // }
+        // greet()
+
+        // let greetExpression = function(){
+        //     console.log("hello world function expression", x)
+        // }
+        // greetExpression()
+
+        // let greetArrow = () => {
+        //     console.log("hello from arrow function", x)
+        // }
+        // greetArrow()
+
+        function outerFunction(){
+            let hello = "Hello from outside"
+            function innerFunction(){
+                let x = 10;
+                console.log(hello, x)
+            }
+            return innerFunction
+        }
+        
+        let myInnerFunction = outerFunction()
+        myInnerFunction()
+
+    </script>
+</body>
+</html>

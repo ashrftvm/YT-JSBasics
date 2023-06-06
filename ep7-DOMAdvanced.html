@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body id="body">
+    <h1 class="hello">Hello DOM</h1>
+    <p class="demo">Hello world!</p>
+    <button class="example-btn">Remove Heading</button>
+    <script>
+        let newElement = document.createElement("p")
+        newElement.textContent = "this is a paragraph"
+        // console.log(newElement)
+        document.getElementById("body").appendChild(newElement)
+
+        const paragraphEl = document.querySelector(".demo")
+        // console.log(paragraphEl)
+        paragraphEl.textContent = "This is the updated text"
+
+        
+
+        const btnEl = document.querySelector(".example-btn")
+        console.log(btnEl)
+
+        btnEl.addEventListener("click", function(){
+            console.log("yes i have been clicked")
+            const headingEl = document.querySelector(".hello")
+            // console.log(headingEl)
+            headingEl.remove()
+        })
+    </script>
+</body>
+</html>
